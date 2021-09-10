@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<style>
+    @media (max-width : 1280px) {
+        body{
+            background: #1b9448 !important;
+        }
+        .main-container{
+            width: 100vw;
+            margin: 0 !important;
+            padding: 20px !important;
+            border: none !important;
+        }
+        .logo-container{
+            width: 100%;
+        }
+        .logo-container img{
+            width: 50%;
+        }
+        .menus-container{
+            justify-content: center !important;
+            flex-direction: column;
+            width: 100vw;
+        }
+        .menu-container{
+            width: 100% !important;
+        }
+        .bottom-links-container{
+            display: flex !important;
+            justify-content: center !important;
+            position: relative !important;
+            flex-direction: column !important;
+        }
+        .bottom-link-container{
+            width: 100%;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            position: initial !important;
+        }
+        .bottom-link-container a{
+            color: #FFFFFF;
+            text-align: center;
+            font-family: "Sackers Gothic Std Heavy", serif;
+            margin-bottom: 0px;
+        }
+    }
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    body{
+        background-image: url("{{asset('images/c-11.jpg')}}");
+        background-size: cover;
+        background-blend-mode: darken;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    .main-container{
+        border: thick double #FFFFFF;
+        padding: 150px;
+        margin: 20px;
+    }
+    h2{
+        color: #FFFFFF;
+    }
+    .logo-container{
+        display: flex;
+        justify-content: center;
+    }
+    .logo-container img{
+        display: flex;
+        justify-content: center;
+        height: auto;
+        width: 300px;
+    }
+    .menus-container{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+    .menu-container{
+        width: 33%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        margin-top: 0px !important;
+    }
+    .menu-container h2{
+        text-align: center;
+    }
+    .menu-container a{
+        margin-bottom: 15px;
+        font-family: "Sackers Gothic Std Heavy", serif;
+        color: white;
+        text-decoration: none;
+        font-size: 13px;
+    }
+    .bottom-links-container{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+    }
+    .bottom-link-container{
+        width: 33%;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        display: flex;
+        margin-bottom: 0 !important;
+        position: relative;
+    }
+    .bottom-link-container a{
+        color: #FFFFFF;
+        text-align: center;
+        font-family: "Sackers Gothic Std Heavy", serif;
+        margin-bottom: -400px;
+    }
+</style>
+<div class="main-container">
+    <div class="logo-container">
+        <img
+                src="{{ asset('images/logo.png') }}"
+                height="auto"
+                alt=""
+                loading="lazy"
+        />
+    </div>
+    <br>
+    <div class="menus-container">
+        <div class="menu-container">
+            <h2>NOTRE DOMAINE</h2>
+            <a href="{{path('app_notre_histoire')}}">NOTRE HISTOIRE</a>
+            <a href="{{path('app_nos_evenements')}}">NOS EVENEMENTS</a>
+            <a href="{{path('app_nos_chambres_hote')}}">NOS CHAMBRES D'HÔTE</a>
+        </div>
+        <div class="menu-container">
+            <h2>NOTRE SAVOIR-FAIRE</h2>
+            <a href="{{path('app_travail_de_la_vigne')}}">LE TRAVAIL DE LA VIGNE</a>
+            <a href="{{path('app_notre_histoire')}}">AGRICULTURE BIOLOGIQUE</a>
+            <a href="{{path('app_notre_histoire')}}">DEGUSTATION ET RESTAURATION</a>
+        </div>
+        <div class="menu-container">
+            <h2>NOS VINS</h2>
+            <a href="{{path('app_notre_histoire')}}">AOC CASTILLON CÔTES DE BORDEAUX</a>
+            <a href="{{path('app_notre_histoire')}}">AOC BORDEAUX ROUGE</a>
+            <a href="{{path('app_notre_histoire')}}">AOC BORDEAUX ROSÉ</a>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>git
+    <div class="menus-container">
+        <div class="menu-container">
+            <a href="{{path('app_nos_chambres_hote')}}">Actualités</a>
+        </div>
+        <div class="menu-container">
+            <a href="{{path('app_notre_histoire')}}">Mentions légales</a>
+        </div>
+        <div class="menu-container">
+            <a href="{{path('app_notre_histoire')}}">Contact</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
